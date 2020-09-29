@@ -1,0 +1,9 @@
+{
+  "name": "module-loader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx http-server -c-1 -p 9000"
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Module Loader</title>
+    <script src="//jspm.io/system@0.19.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.2.1/jasmine.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.2.1/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.2.1/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.2.1/boot.js"></script>
+
+    <script type="text/javascript" src="systemjs.config.js"></script>
+  </head>
+  <body>
+    <div>
+      <button  onclick="loadModules()">Load modules</button>
+      <button  onclick="runSpec()">Run spec</button>
+    </div>
+    <ol id="module-list"></ol>
+
+    <script type="text/javascript">
+      function loadModules() {
+        System.import("./module-loader.js");
+      }
+    </script>
+
+    <script>
+      function runSpec() {
+        System.import("./run-spec.js");
+      }
+    </script>
+  </body>
+</html>
